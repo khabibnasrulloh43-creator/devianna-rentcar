@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PT Cahaya Devianna Sahara | Trusted Partner in Transportation</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-blue: #00a8ff;
+            --dark-bg: #0b0d17;
+            --card-bg: #161b22;
+            --text-gray: #bdc3c7;
+        }
+
+        * { box-sizing: border-box; }
+        body { 
+            font-family: 'Montserrat', sans-serif; 
+            margin: 0; 
+            background-color: var(--dark-bg); 
+            color: white; 
+            line-height: 1.6;
+        }
+
+        /* --- Header --- */
+        header { 
+            padding: 20px 5%; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            background: rgba(0,0,0,0.9); 
+            position: fixed; 
+            width: 100%; 
+            top: 0; 
+            z-index: 1000;
+            border-bottom: 1px solid #333;
+        }
+        .brand { font-family: 'Playfair Display', serif; font-size: 20px; color: var(--primary-blue); letter-spacing: 2px; }
+
+        /* --- Hero Section --- */
+        .hero { 
+            height: 100vh; 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: center; 
+            align-items: center; 
+            text-align: center; 
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&q=80&w=1920'); 
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        .hero h1 { font-family: 'Playfair Display', serif; font-size: 3.5rem; margin: 0; }
+        .hero p { font-size: 1.2rem; color: var(--primary-blue); font-weight: 300; letter-spacing: 3px; margin-top: 10px; }
+
+        /* --- Services Section --- */
+        .services { display: flex; flex-wrap: wrap; padding: 100px 5%; gap: 30px; justify-content: center; }
+        .service-card { 
+            flex: 1; min-width: 300px; padding: 50px 30px; 
+            background: var(--card-bg); border: 1px solid #333; 
+            border-radius: 20px; text-align: center; transition: 0.4s;
+        }
+        .service-card:hover { border-color: var(--primary-blue); transform: translateY(-10px); box-shadow: 0 10px 30px rgba(0,168,255,0.2); }
+        .service-card h2 { font-size: 24px; margin-bottom: 15px; }
+        .btn-view { 
+            padding: 12px 25px; border: 1px solid var(--primary-blue); 
+            background: transparent; color: white; cursor: pointer; border-radius: 50px;
+            font-weight: bold; transition: 0.3s;
+        }
+        .btn-view:hover { background: var(--primary-blue); }
+
+        /* --- Fleet Gallery (Hidden by Default) --- */
+        #fleet-section { display: none; padding: 80px 5%; background: #0f121d; text-align: center; }
+        .fleet-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-top: 40px; }
+        .unit-card { background: #1c2128; border-radius: 15px; overflow: hidden; border: 1px solid #333; }
+        .unit-card img { width: 100%; height: 200px; object-fit: cover; }
+        .unit-info { padding: 20px; }
+        .btn-book { text-decoration: none; color: var(--primary-blue); font-weight: bold; font-size: 14px; }
+
+        /* --- Feedback & Grafik --- */
+        .feedback-section { padding: 80px 5%; display: flex; flex-wrap: wrap; gap: 50px; background: var(--dark-bg); }
+        .form-saran { flex: 1; min-width: 300px; background: #161b22; padding: 40px; border-radius: 20px; }
+        .form-saran input, .form-saran textarea { 
+            width: 100%; padding: 15px; margin-bottom: 15px; 
+            background: #0d1117; border: 1px solid #333; color: white; border-radius: 10px;
+        }
+        .grafik-box { flex: 1; min-width: 300px; text-align: center; }
+        .circle-graph { 
+            width: 220px; height: 220px; border-radius: 50%; 
+            border: 8px solid var(--primary-blue); margin: 0 auto;
+            display: flex; flex-direction: column; justify-content: center; align-items: center;
+            background: radial-gradient(circle, #161b22 60%, var(--primary-blue) 100%);
+        }
+
+        /* --- Floating WhatsApp --- */
+        .wa-container { position: fixed; bottom: 20px; right: 20px; z-index: 9999; }
+        .wa-btn { 
+            display: flex; align-items: center; padding: 12px 20px; 
+            border-radius: 50px; color: white; text-decoration: none; 
+            margin-bottom: 10px; font-weight: bold; box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            transition: 0.3s; font-size: 13px;
+        }
+        .wa-rental { background: #25d366; }
+        .wa-wash { background: #3498db; }
+        .wa-btn:hover { transform: scale(1.05); }
+
+        footer { text-align: center; padding: 50px; background: #000; border-top: 1px solid #222; }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="brand">DEVIANNA SAHARA</div>
+    <nav style="font-size: 14px; font-weight: 300;">[ HOME ] &nbsp; [ RENTAL ] &nbsp; [ CAR WASH ]</nav>
+</header>
+
+<section class="hero">
+    <h1>PT CAHAYA DEVIANNA SAHARA</h1>
+    <p>TRUSTED PARTNER IN TRANSPORTATION</p>
+</section>
+
+<section class="services">
+    <div class="service-card">
+        <h2>DEVIANNA RENT CAR</h2>
+        <p style="color: var(--text-gray); margin-bottom: 30px;">"Your Trusted Vehicle Rental"</p>
+        <button class="btn-view" onclick="toggleFleet()">Lihat 17 Pilihan Mobil</button>
+    </div>
+    <div class="service-card">
+        <h2>DEVIANNA CAR WASH</h2>
+        <p style="color: var(--text-gray); margin-bottom: 30px;">"Your Trusted Car Wash"</p>
+        <button class="btn-view" onclick="window.location.href='https://wa.me/085700019738'">Booking Cuci Mobil</button>
+    </div>
+</section>
+
+<section id="fleet-section">
+    <h2 style="font-family: 'Playfair Display'; font-size: 32px;">Katalog Armada Kami</h2>
+    <div class="fleet-grid">
+        <div class="unit-card">
+            <img src="https://image.pollinations.ai/prompt/luxurious_black_Toyota_Alphard_2021_studio_lighting" alt="Alphard">
+            <div class="unit-info">
+                <h3>Alphard Facelift 2021</h3>
+                <p>3 Unit - Hitam</p>
+                <a href="https://wa.me/081226017092?text=Halo%20Devianna,%20saya%20ingin%20booking%20Alphard" class="btn-book">BOOKING SEKARANG →</a>
+            </div>
+        </div>
+        <div class="unit-card">
+            <img src="https://image.pollinations.ai/prompt/black_Toyota_Fortuner_VRZ_2019_studio" alt="Fortuner">
+            <div class="unit-info">
+                <h3>Fortuner VRZ 2019</h3>
+                <p>2 Unit - Hitam</p>
+                <a href="https://wa.me/081226017092?text=Halo%20Devianna,%20saya%20ingin%20booking%20Fortuner" class="btn-book">BOOKING SEKARANG →</a>
+            </div>
+        </div>
+        </div>
+</section>
+
+<section class="feedback-section">
+    <div class="form-saran">
+        <h2 style="color: var(--primary-blue);">Kolom Saran</h2>
+        <p style="font-size: 14px; color: var(--text-gray);">Berikan masukan untuk meningkatkan layanan PT Cahaya Devianna Sahara.</p>
+        <form>
+            <input type="text" placeholder="Nama Lengkap" required>
+            <textarea placeholder="Saran Anda..." rows="5" required></textarea>
+            <button type="submit" class="btn-view" style="background: var(--primary-blue); border: none; width: 100%;">Kirim Sekarang</button>
+        </form>
+    </div>
+    <div class="grafik-box">
+        <h2 style="color: var(--primary-blue);">Tingkat Kepuasan</h2>
+        <div class="circle-graph">
+            <span style="font-size: 50px; font-weight: bold;">98%</span>
+            <span style="font-size: 12px; letter-spacing: 2px;">CUSTOMER SATISFACTION</span>
+        </div>
+        <p style="margin-top: 30px; font-size: 14px; color: var(--text-gray);">Berdasarkan data 500+ layanan rental & car wash bulan ini.</p>
+    </div>
+</section>
+
+<footer>
+    <p style="font-weight: bold; color: var(--primary-blue);">PT CAHAYA DEVIANNA SAHARA</p>
+    <p style="font-size: 12px; color: #555;">[MASUKKAN ALAMAT LENGKAP DI SINI]<br>
+    Instagram: [MASUKKAN USERNAME] | TikTok: [MASUKKAN USERNAME]</p>
+</footer>
+
+<div class="wa-container">
+    <a href="https://wa.me/081226017092" class="wa-btn wa-rental">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" width="20" style="margin-right: 10px; filter: invert(1);"> 
+        Admin Rental Mobil
+    </a>
+    <a href="https://wa.me/085700019738" class="wa-btn wa-wash">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" width="20" style="margin-right: 10px; filter: invert(1);"> 
+        Admin Car Wash
+    </a>
+</div>
+
+<script>
+    // Fungsi untuk menampilkan galeri saat tombol diklik
+    function toggleFleet() {
+        var x = document.getElementById("fleet-section");
+        if (x.style.display === "none" || x.style.display === "") {
+            x.style.display = "block";
+            window.scrollTo({ top: x.offsetTop - 100, behavior: 'smooth' });
+        } else {
+            x.style.display = "none";
+        }
+    }
+</script>
+
+</body>
+</html>
